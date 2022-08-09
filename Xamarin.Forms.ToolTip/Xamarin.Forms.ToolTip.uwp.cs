@@ -89,23 +89,23 @@ namespace Xamarin.Forms.ToolTip
                     toolTip.Width = width;
 
                 ToolTipService.SetToolTip(control, toolTip);
+            }
+        }
 
-                PlacementMode GetPlacementMode()
-                {
-                    switch (ToolTipEffect.GetPosition(Element))
-                    {
-                        case ToolTipPosition.Bottom:
-                            return PlacementMode.Bottom;
-                        case ToolTipPosition.Top:
-                            return PlacementMode.Top;
-                        case ToolTipPosition.Left:
-                            return PlacementMode.Left;
-                        case ToolTipPosition.Right:
-                            return PlacementMode.Right;
-                        default:
-                            return PlacementMode.Mouse;
-                    }
-                }
+        private PlacementMode GetPlacementMode()
+        {
+            switch (ToolTipEffect.GetPosition(Element))
+            {
+                case ToolTipPosition.Bottom:
+                    return PlacementMode.Bottom;
+                case ToolTipPosition.Top:
+                    return PlacementMode.Top;
+                case ToolTipPosition.Left:
+                    return PlacementMode.Left;
+                case ToolTipPosition.Right:
+                    return PlacementMode.Right;
+                default:
+                    return PlacementMode.Mouse;
             }
         }
 
