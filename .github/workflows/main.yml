@@ -12,11 +12,11 @@ jobs:
     - name: Setup Nuget.exe
       uses: NuGet/setup-nuget@v1.0.6
     - name: Restore Nuget
-      run: nuget restore  myToolTip/myToolTip.csproj
+      run: nuget restore  Xamarin.Forms.ToolTip/Xamarin.Forms.ToolTip.csproj
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1
     - name: Build with dotnet
-      run: msbuild myToolTip/myToolTip.csproj -property:Configuration=Release
+      run: msbuild Xamarin.Forms.ToolTip/Xamarin.Forms.ToolTip.csproj -property:Configuration=Release
     - name: Push Package to nuget
       run: dotnet nuget push **/*.nupkg
              --api-key ${{ secrets.nugetapikey }}

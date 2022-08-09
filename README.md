@@ -1,4 +1,4 @@
-# myToolTip
+# Xamarin.Forms.ToolTip
 
 Cross platform Xamarin forms tooltip works for IOS, Android and UWP. 
 
