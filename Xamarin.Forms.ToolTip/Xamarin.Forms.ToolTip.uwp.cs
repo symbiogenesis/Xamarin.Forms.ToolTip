@@ -1,9 +1,6 @@
 ﻿using System.ComponentModel;
-
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 
 using Xamarin.Forms;
@@ -15,7 +12,7 @@ namespace Xamarin.Forms.ToolTip
 {
     /// <summary>
     /// Interface for Xamarin.Forms.ToolTip
-    /// </summary> 
+    /// </summary>
     public class ToolTipImplementation : PlatformEffect
     {
         private static readonly ViewToRendererConverter _viewToRendererConverter = new();
@@ -73,6 +70,7 @@ namespace Xamarin.Forms.ToolTip
                 {
                     toolTipContent = ToolTipEffect.GetText(Element);
                 }
+
                 toolTip = new Windows.UI.Xaml.Controls.ToolTip
                 {
                     Background = XamarinColorToNative(ToolTipEffect.GetBackgroundColor(Element)),
@@ -109,11 +107,6 @@ namespace Xamarin.Forms.ToolTip
             }
         }
 
-        private void ToolTipTapped(object sender, TappedRoutedEventArgs e)
-        {
-            toolTip.IsOpen = false;
-        }
-
         protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
         {
             base.OnElementPropertyChanged(args);
@@ -136,7 +129,7 @@ namespace Xamarin.Forms.ToolTip
             //}
         }
 
-        private SolidColorBrush XamarinColorToNative(Xamarin.Forms.Color color)
+        private static SolidColorBrush XamarinColorToNative(Color color)
         {
             var alpha = (byte)(color.A * 255);
             var red = (byte)(color.R * 255);
