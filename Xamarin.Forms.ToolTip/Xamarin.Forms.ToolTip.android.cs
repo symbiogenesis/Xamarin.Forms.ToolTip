@@ -10,7 +10,6 @@ using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-
 [assembly: ResolutionGroupName("Effects")]
 [assembly: ExportEffect(typeof(Xamarin.Forms.ToolTip.ToolTipImplementation), nameof(Xamarin.Forms.ToolTip.ToolTipEffect))]
 namespace Xamarin.Forms.ToolTip
@@ -35,7 +34,6 @@ namespace Xamarin.Forms.ToolTip
 
             if (!string.IsNullOrEmpty(text))
             {
-
                 var position = ToolTipEffect.GetPosition(Element);
                 builder = new Tooltip.Builder(control);
                 switch (position)
@@ -84,13 +82,11 @@ namespace Xamarin.Forms.ToolTip
             }
         }
 
-
         protected override void OnAttached()
         {
             var control = Control ?? Container;
             control.Click += OnTap;
         }
-
 
         protected override void OnDetached()
         {
@@ -107,8 +103,5 @@ namespace Xamarin.Forms.ToolTip
                 GetToolTip();
             }
         }
-
     }
-
 }
-
