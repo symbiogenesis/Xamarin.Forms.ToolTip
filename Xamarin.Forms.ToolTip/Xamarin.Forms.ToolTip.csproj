@@ -67,7 +67,7 @@
 	</PropertyGroup>
 	
 	<ItemGroup> 
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 	</ItemGroup>
 	
 	<ItemGroup>
@@ -102,7 +102,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Forms" Version="4.7.0.1142" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
 	</ItemGroup>
 
 	<ItemGroup>
