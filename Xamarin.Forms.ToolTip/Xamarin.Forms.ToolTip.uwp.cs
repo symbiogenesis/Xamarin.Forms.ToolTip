@@ -129,13 +129,13 @@ namespace Xamarin.Forms.ToolTip
             //}
         }
 
-        private static SolidColorBrush XamarinColorToNative(Color color)
+        private static Windows.UI.Xaml.Media.SolidColorBrush XamarinColorToNative(Color color)
         {
             var alpha = (byte)(color.A * 255);
             var red = (byte)(color.R * 255);
             var green = (byte)(color.G * 255);
             var blue = (byte)(color.B * 255);
-            return new SolidColorBrush(Windows.UI.Color.FromArgb(alpha, red, green, blue));
+            return new Windows.UI.Xaml.Media.SolidColorBrush(Windows.UI.Color.FromArgb(alpha, red, green, blue));
         }
     }
 }
