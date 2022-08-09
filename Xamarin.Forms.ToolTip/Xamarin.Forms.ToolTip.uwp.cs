@@ -1,4 +1,4 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -40,9 +40,7 @@ namespace Xamarin.Forms.ToolTip
             //}
             //else
             ShowToolTip();
-
         }
-
 
         //private void OnClick(object sender, RoutedEventArgs e)
         //{
@@ -108,10 +106,8 @@ namespace Xamarin.Forms.ToolTip
                             return PlacementMode.Mouse;
                     }
                 }
-
             }
         }
-
 
         private void ToolTipTapped(object sender, TappedRoutedEventArgs e)
         {
@@ -122,7 +118,6 @@ namespace Xamarin.Forms.ToolTip
         {
             base.OnElementPropertyChanged(args);
 
-
             if (args.PropertyName == "Text")
             {
                 if (toolTip != null)
@@ -131,8 +126,6 @@ namespace Xamarin.Forms.ToolTip
                 }
             }
         }
-
-
 
         protected override void OnDetached()
         {
