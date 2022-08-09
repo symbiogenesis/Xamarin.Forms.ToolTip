@@ -97,15 +97,15 @@ namespace Xamarin.Forms.ToolTip
                     switch (ToolTipEffect.GetPosition(Element))
                     {
                         case ToolTipPosition.Bottom:
-                            return Windows.UI.Xaml.Controls.Primitives.PlacementMode.Bottom;
+                            return PlacementMode.Bottom;
                         case ToolTipPosition.Top:
-                            return Windows.UI.Xaml.Controls.Primitives.PlacementMode.Top;
+                            return PlacementMode.Top;
                         case ToolTipPosition.Left:
-                            return Windows.UI.Xaml.Controls.Primitives.PlacementMode.Left;
+                            return PlacementMode.Left;
                         case ToolTipPosition.Right:
-                            return Windows.UI.Xaml.Controls.Primitives.PlacementMode.Right;
+                            return PlacementMode.Right;
                         default:
-                            return Windows.UI.Xaml.Controls.Primitives.PlacementMode.Mouse;
+                            return PlacementMode.Mouse;
                     }
                 }
 
