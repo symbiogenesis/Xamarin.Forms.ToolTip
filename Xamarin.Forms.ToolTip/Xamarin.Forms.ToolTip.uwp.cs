@@ -18,6 +18,8 @@ namespace Xamarin.Forms.ToolTip
     /// </summary> 
     public class ToolTipImplementation : PlatformEffect
     {
+        private static readonly ViewToRendererConverter _viewToRendererConverter = new();
+
         //Action Action;
 
         protected override void OnAttached()
@@ -67,9 +69,7 @@ namespace Xamarin.Forms.ToolTip
 
                 if (content != null)
                 {
-                    var viewToRendererConverter = new ViewToRendererConverter();
-                    var frameworkElement = viewToRendererConverter.Convert(content, null, null, null);
-                    toolTipContent = frameworkElement;
+                    toolTipContent = _viewToRendererConverter.Convert(content, null, null, null);
                 }
                 else
                 {
