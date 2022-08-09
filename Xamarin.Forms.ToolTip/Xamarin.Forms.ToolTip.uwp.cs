@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -55,7 +55,7 @@ namespace Xamarin.Forms.ToolTip
         //    codePopup.IsOpen = true;
 
         //}
-        ToolTip toolTip;
+        Windows.UI.Xaml.Controls.ToolTip toolTip;
         private void ShowToolTip()
         {
             var control = Control ?? Container;
@@ -75,7 +75,7 @@ namespace Xamarin.Forms.ToolTip
                 {
                     toolTipContent = ToolTipEffect.GetText(Element);
                 }
-                toolTip = new ToolTip
+                toolTip = new Windows.UI.Xaml.Controls.ToolTip
                 {
                     Background = XamarinColorToNative(ToolTipEffect.GetBackgroundColor(Element)),
                     Content = toolTipContent ?? "n/a",
