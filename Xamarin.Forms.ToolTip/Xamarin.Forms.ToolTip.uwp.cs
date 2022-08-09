@@ -60,7 +60,7 @@ namespace Xamarin.Forms.ToolTip
         {
             var control = Control ?? Container;
 
-            if (control is DependencyObject)
+            if (control is not null)
             {
                 object toolTipContent;
                 var content = ToolTipEffect.GetContent(Element);
